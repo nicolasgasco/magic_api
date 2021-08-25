@@ -1,0 +1,29 @@
+@import "../../assets/styles/colors", "../../assets/styles/fonts";
+
+header {
+  background-color: $darker;
+
+  padding: 1rem 0.7rem;
+
+  display: flex;
+  flex-flow: row nowrap;
+
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-family: "Magic", serif;
+    font-size: 1.3rem;
+  }
+
+  nav {
+    button {
+      width: 1.7rem;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
