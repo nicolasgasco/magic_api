@@ -36,10 +36,18 @@ header {
     position: fixed;
     min-height: 20%;
     width: 100%;
-    opacity: 0.9;
-    background-color: lighten($darker, 2);
+    opacity: 0.95;
+    background-color: $darker;
+    // This is to compensate a small gap showing on localhost
+    margin-top: -2px;
+
     nav {
       @include container-padding;
+    }
+
+    li::before {
+      content: "‣ ";
+      margin-right: 0.5rem;
     }
   }
 
