@@ -1,0 +1,11 @@
+@import "../../assets/styles/colors", "../../assets/styles/fonts",
+  "../../assets/styles/mixin";
+
+footer {
+  background-color: $darker;
+
+  text-align: center;
+  font-size: 0.8rem;
+ 
+  @include container-padding;
+}

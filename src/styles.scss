@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import "./assets/styles/colors", "./assets/styles/fonts";
+@import "./assets/styles/colors", "./assets/styles/fonts",
+  "./assets/styles/mixin";
 
 body {
+  min-height: 100vh;
   background-color: $dark;
 }
 
@@ -13,10 +15,29 @@ body {
   padding: 0;
 
   color: white;
+
+  max-width: 100vw;
+
+  font-family: sans-serif;
 }
 
 button {
-    background-color: inherit;
-    outline: none;
-    border: none;
+  background-color: inherit;
+  outline: none;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+.page-container {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
 }

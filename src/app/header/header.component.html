@@ -1,8 +1,17 @@
 <header>
-  <h1>Magic the Gathering</h1>
-  <nav>
-    <button>
-      <img src="../../assets/img/menu.png" alt="White menu icon" />
-    </button>
-  </nav>
+  <div class="header-container">
+    <h1>Magic the Gathering&trade;</h1>
+    <nav>
+      <button (click)="onToggleMenu()">
+        <img src="../../assets/img/menu.png" alt="White menu icon" />
+      </button>
+    </nav>
+  </div>
+  <div class="header-panel" [ngClass]="{ hidden: showSidebar }">
+    <nav>
+      <ul>
+        <li>Set</li>
+      </ul>
+    </nav>
+  </div>
 </header>

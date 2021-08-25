@@ -1,0 +1,37 @@
+@import "../../assets/styles/colors", "../../assets/styles/fonts",
+  "../../assets/styles/mixin";
+
+.hero-container {
+  height: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  @include container-padding;
+
+  background-image: url("../../assets/img/foundry_mobile.jpg");
+  background-position: bottom;
+  background-size: cover;
+
+  h2 {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 2;
+
+    text-align: center;
+  }
+
+  span {
+    line-height: 1;
+    color: inherit;
+    font-family: "Magic", serif;
+    font-size: 2.5rem;
+
+    span {
+        font-size: 2rem;
+    }
+  }
+}

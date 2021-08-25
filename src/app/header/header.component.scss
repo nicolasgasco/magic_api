@@ -1,19 +1,24 @@
-@import "../../assets/styles/colors", "../../assets/styles/fonts";
+@import "../../assets/styles/colors", "../../assets/styles/fonts",
+  "../../assets/styles/mixin";
 
 header {
-  background-color: $darker;
+  > * {
+    @include container-padding;
+  }
 
-  padding: 1rem 0.7rem;
+  .header-container {
+    background-color: $darker;
 
-  display: flex;
-  flex-flow: row nowrap;
+    display: flex;
+    flex-flow: row nowrap;
 
-  justify-content: space-between;
-  align-items: center;
+    justify-content: space-between;
+    align-items: center;
 
-  h1 {
-    font-family: "Magic", serif;
-    font-size: 1.3rem;
+    h1 {
+      font-family: "Magic", serif;
+      font-size: 1.3rem;
+    }
   }
 
   nav {
@@ -25,5 +30,20 @@ header {
         width: 100%;
       }
     }
+  }
+
+  .header-panel {
+    position: fixed;
+    min-height: 20%;
+    width: 100%;
+    opacity: 0.9;
+    background-color: lighten($darker, 2);
+    nav {
+      @include container-padding;
+    }
+  }
+
+  .hidden {
+    display: none;
   }
 }
