@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-search.component.scss'],
 })
 export class CardSearchComponent implements OnInit {
-  cardName = 'ciao';
+  cardName = '';
   constructor() {
     console.log(this.cardName);
   }

@@ -4,16 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ImageHeroComponent } from './image-hero/image-hero.component';
 import { FooterComponent } from './footer/footer.component';
-import { CardSearchComponent } from './card-search/card-search.component';
+import { MainContentComponent } from './main-content/main-content.component';
+import { CardSearchComponent } from './main-content/card-search/card-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ImageHeroComponent,
     FooterComponent,
+    MainContentComponent,
     CardSearchComponent,
   ],
   imports: [BrowserModule, FormsModule],

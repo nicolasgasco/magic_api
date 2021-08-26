@@ -1,0 +1,37 @@
+@import "../../../assets/styles/colors", "../../../assets/styles/fonts",
+  "../../../assets/styles/mixin";
+
+section {
+  @include container-padding;
+
+  text-align: center;
+
+  h2 {
+      font-size: 2rem;
+  }
+
+  small {
+      font-size: 0.8rem;
+  };
+}
+
+.card-name-input {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 1.5rem 0;
+
+  background-color: inherit;
+  border-bottom: 7px $darker solid;
+
+  color: white;
+
+  font-size: 1.1rem;
+  text-align: center;
+  letter-spacing: 3px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+}
