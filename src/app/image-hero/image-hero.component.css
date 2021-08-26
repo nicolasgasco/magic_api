@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Magic";
+  src: url("../fonts/MAGIC.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "Matrix";
+  src: url("../fonts/matrix_bold.ttf") format("truetype");
+}
+
+.hero-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.2rem 1rem;
+  background-image: url("../../assets/img/foundry_mobile.jpg");
+  background-position: bottom;
+  background-size: cover;
+}
+
+.hero-container h2 {
+  font-size: 1.5rem;
+  color: #1C1D1F;
+  font-weight: bold;
+  letter-spacing: 3px;
+  line-height: 2;
+  text-align: center;
+}
+
+.hero-container span {
+  line-height: 1;
+  color: #0C0F11;
+  font-family: "Magic", serif;
+  font-size: 2.5rem;
+}
+
+.hero-container span span {
+  font-size: 2rem;
+}
+/*# sourceMappingURL=image-hero.component.css.map */

@@ -1,0 +1,26 @@
+@import "../../assets/styles/colors", "../../assets/styles/fonts",
+  "../../assets/styles/mixin";
+
+section {
+  @include container-padding;
+}
+
+.card-name-input {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+
+  background-color: white;
+  border: 3px $darker solid;
+  border-radius: 5px;
+
+  color: $darker;
+
+  text-align: center;
+  letter-spacing: 3px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+}

@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Magic";
+  src: url("../fonts/MAGIC.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "Matrix";
+  src: url("../fonts/matrix_bold.ttf") format("truetype");
+}
+
+section {
+  padding: 1.2rem 1rem;
+}
+
+.card-name-input {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  background-color: white;
+  border: 3px #0C0F11 solid;
+  border-radius: 5px;
+  color: #0C0F11;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.card-name-input:active, .card-name-input:focus, .card-name-input:hover {
+  outline: none;
+}
+/*# sourceMappingURL=card-search.component.css.map */

@@ -13,6 +13,5 @@ export class HeaderComponent implements OnInit {
 
   onToggleMenu() {
     this.showSidebar = !this.showSidebar;
-    console.log(this.showSidebar);
   }
 }

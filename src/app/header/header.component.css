@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Magic";
+  src: url("../fonts/MAGIC.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "Matrix";
+  src: url("../fonts/matrix_bold.ttf") format("truetype");
+}
+
+header > * {
+  padding: 1.2rem 1rem;
+}
+
+header .header-container {
+  background-color: #0C0F11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-container h1 {
+  font-family: "Magic", serif;
+  font-size: 1.3rem;
+}
+
+header nav button {
+  width: 1.7rem;
+}
+
+header nav button img {
+  display: block;
+  width: 100%;
+}
+
+header .header-panel {
+  position: fixed;
+  min-height: 20%;
+  width: 100%;
+  opacity: 0.95;
+  background-color: #0C0F11;
+  margin-top: -2px;
+}
+
+header .header-panel nav {
+  padding: 1.2rem 1rem;
+}
+
+header .header-panel li::before {
+  content: "‣ ";
+  margin-right: 0.5rem;
+}
+
+header .hidden {
+  display: none;
+}
+/*# sourceMappingURL=header.component.css.map */

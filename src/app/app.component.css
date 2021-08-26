@@ -1,0 +1,12 @@
+app-header {
+  grid-area: "header";
+}
+
+app-image-hero {
+  grid-area: "main";
+}
+
+app-footer {
+  grid-area: "footer";
+}
+/*# sourceMappingURL=app.component.css.map */
