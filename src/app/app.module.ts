@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { CardSearchComponent } from './main-content/card-search/card-search.component';
+import { ImageHeroComponent } from './main-content/image-hero/image-hero.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CardSearchComponent } from './main-content/card-search/card-search.comp
     FooterComponent,
     MainContentComponent,
     CardSearchComponent,
+    ImageHeroComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
