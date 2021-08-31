@@ -2,17 +2,18 @@
   "../../../assets/styles/mixin";
 
 section {
+  @include desktop-container;
   @include container-padding;
 
   text-align: center;
 
   h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   small {
-      font-size: 0.8rem;
-  };
+    font-size: 0.8rem;
+  }
 }
 
 .card-name-input {

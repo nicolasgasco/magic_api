@@ -8,8 +8,18 @@
         <img src="../../assets/img/menu.png" alt="White menu icon" />
       </button>
       <div class="desktop-nav">
-        <a routerLink="/sets" routerLinkActive="active">Sets</a>
-        <a routerLink="/name" routerLinkActive="active">Cards by name</a>
+        <a
+          routerLink="/sets"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Sets</a
+        >
+        <a
+          routerLink="/name"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Cards by name</a
+        >
       </div>
     </nav>
   </div>
