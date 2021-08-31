@@ -6,8 +6,11 @@ header {
     @include container-padding;
   }
 
+  background-color: $darker;
+
   .header-container {
-    background-color: $darker;
+    margin: 0 auto;
+    max-width: 1400px;
 
     display: flex;
     flex-flow: row nowrap;

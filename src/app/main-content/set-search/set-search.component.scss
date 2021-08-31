@@ -1,0 +1,6 @@
+@import "../../../assets/styles/colors", "../../../assets/styles/fonts",
+  "../../../assets/styles/mixin";
+  
+section {
+  @include desktop-container;
+}
