@@ -19,6 +19,26 @@ header {
       font-family: "Magic", serif;
       font-size: 1.3rem;
     }
+
+    .desktop-nav {
+      display: none;
+    }
+
+    @media only screen and (min-width: 700px) {
+      .desktop-nav {
+        display: inherit;
+      }
+
+      .menu-button {
+        display: none;
+      }
+
+      nav div {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+      }
+    }
   }
 
   nav {
@@ -49,9 +69,21 @@ header {
       content: "‣ ";
       margin-right: 0.5rem;
     }
+
+    li {
+      font-weight: bold;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
   }
 
   .hidden {
     display: none;
+  }
+
+  .active {
+    text-decoration: underline;
   }
 }

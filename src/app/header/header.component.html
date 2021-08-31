@@ -1,17 +1,27 @@
 <header>
   <div class="header-container">
-    <h1><a href="#">Magic the Gathering&trade;</a></h1>
+    <h1>
+      <a routerLink="/" (click)="closeMenu()">Magic the Gathering&trade;</a>
+    </h1>
     <nav>
-      <button (click)="onToggleMenu()">
+      <button (click)="onToggleMenu()" class="menu-button">
         <img src="../../assets/img/menu.png" alt="White menu icon" />
       </button>
+      <div class="desktop-nav">
+        <a routerLink="/sets" routerLinkActive="active">Sets</a>
+        <a routerLink="/name" routerLinkActive="active">Cards by name</a>
+      </div>
     </nav>
   </div>
   <div class="header-panel" [ngClass]="{ hidden: !showSidebar }">
     <nav>
       <ul>
-        <li><a href="#">Sets with</a></li>
-        <li><a href="#">Card search by name</a></li>
+        <li>
+          <a routerLink="/sets" (click)="closeMenu()">See cards by set</a>
+        </li>
+        <li>
+          <a routerLink="/name" (click)="closeMenu()">Search cards by name</a>
+        </li>
       </ul>
     </nav>
   </div>
