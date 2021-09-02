@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule, Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -35,6 +36,7 @@ const mainContentRoutes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(mainContentRoutes),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
