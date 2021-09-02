@@ -6,7 +6,13 @@ import { Card } from '../../../Card.model';
   template: `
     <ng-container *ngIf="!!card">
       <div>
+        <img
+          [src]="card.imageUrl ? card.imageUrl : '/assets/img/card_back.jpg'"
+          [alt]="card.imageUrl ? card.name : 'Generic Magic card back'"
+        />
         <h3>{{ card.name || '' }}</h3>
+        <p *ngFor="let sentence of card.text.split('. ')">{{ sentence }}</p>
+        <q *ngIf="card.flavor">{{ card.flavor }}</q>
       </div>
     </ng-container>
   `,
@@ -17,5 +23,7 @@ export class CardItemComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.card);
+  }
 }
