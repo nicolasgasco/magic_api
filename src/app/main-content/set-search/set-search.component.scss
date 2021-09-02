@@ -1,6 +1,14 @@
 @import "../../../assets/styles/colors", "../../../assets/styles/fonts",
   "../../../assets/styles/mixin";
-  
+
 section {
   @include desktop-container;
+  @include container-padding;
+  @include mobile-container;
+
+  select {
+    option {
+      color: black !important;
+    }
+  }
 }

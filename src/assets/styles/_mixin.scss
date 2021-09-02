@@ -6,3 +6,17 @@
   max-width: 900px;
   margin: 0 auto;
 }
+
+@mixin mobile-container {
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  small {
+    font-size: 0.8rem;
+  }
+
+  overflow-wrap: break-word;
+}
