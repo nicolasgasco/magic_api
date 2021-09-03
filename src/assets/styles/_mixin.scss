@@ -20,3 +20,26 @@
 
   overflow-wrap: break-word;
 }
+
+@mixin styled-input {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 1.5rem 0;
+
+  background-color: inherit;
+  border: 0px;
+  border-bottom: 7px $darker solid;
+
+  color: white;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+}
+
+@mixin bullet-point {
+  content: "‣ ";
+  margin-right: 0.5rem;
+}

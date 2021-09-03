@@ -7,8 +7,13 @@ section {
   @include mobile-container;
 
   select {
+    @include styled-input;
+    text-overflow: ellipsis;
+    font-size: 12px;
     option {
-      color: black !important;
+      font-size: 11px;
+      border: 0;
+      background-color: $darker;
     }
   }
 }

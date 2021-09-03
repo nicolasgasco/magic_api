@@ -69,8 +69,7 @@ header {
     }
 
     li::before {
-      content: "‣ ";
-      margin-right: 0.5rem;
+      @include bullet-point;
     }
 
     li {
