@@ -6,10 +6,6 @@ import { Card } from '../../../Card.model';
   template: `
     <ng-container *ngIf="!!card">
       <div class="card-container">
-        <img
-          [src]="card.imageUrl ? card.imageUrl : '/assets/img/card_back.jpg'"
-          [alt]="card.imageUrl ? card.name : 'Generic Magic card back'"
-        />
         <h3>{{ card.name || '' }}</h3>
         <ng-container *ngIf="card.text">
           <p *ngFor="let sentence of card.text.split('. ')">
@@ -17,6 +13,10 @@ import { Card } from '../../../Card.model';
           </p>
         </ng-container>
         <q *ngIf="card.flavor">{{ card.flavor }}</q>
+        <img
+          [src]="card.imageUrl ? card.imageUrl : '/assets/img/card_back.jpg'"
+          [alt]="card.imageUrl ? card.name : 'Generic Magic card back'"
+        />
       </div>
     </ng-container>
   `,
