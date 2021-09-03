@@ -51,13 +51,17 @@ export class SetSearchComponent implements OnInit {
             if (b.name > a.name) return -1;
             return 0;
           });
+
+        this.onSelectSet();
       });
   }
 
-  onSelectSet(event) {
+  onSelectSet(event?) {
     this.http
       .get(
-        `https://api.magicthegathering.io/v1/cards?set=${event.target.value}`
+        `https://api.magicthegathering.io/v1/cards?set=${
+          event ? event.target.value : this.sets[0].code
+        }`
       )
       .subscribe((setCardsId) => {
         // Populate cards only if array is not empty

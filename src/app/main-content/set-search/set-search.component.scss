@@ -10,6 +10,7 @@ section {
     @include styled-input;
     text-overflow: ellipsis;
     font-size: 12px;
+    text-align-last: center;
     option {
       font-size: 11px;
       border: 0;

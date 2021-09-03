@@ -5,7 +5,7 @@ import { Card } from '../../../Card.model';
   selector: 'app-card-item',
   template: `
     <ng-container *ngIf="!!card">
-      <div>
+      <div class="card-container">
         <img
           [src]="card.imageUrl ? card.imageUrl : '/assets/img/card_back.jpg'"
           [alt]="card.imageUrl ? card.name : 'Generic Magic card back'"
