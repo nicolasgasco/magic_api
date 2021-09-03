@@ -11,7 +11,11 @@ import { Card } from '../../../Card.model';
           [alt]="card.imageUrl ? card.name : 'Generic Magic card back'"
         />
         <h3>{{ card.name || '' }}</h3>
-        <p *ngFor="let sentence of card.text.split('. ')">{{ sentence }}</p>
+        <ng-container *ngIf="card.text">
+          <p *ngFor="let sentence of card.text.split('. ')">
+            {{ sentence.trim() }}
+          </p>
+        </ng-container>
         <q *ngIf="card.flavor">{{ card.flavor }}</q>
       </div>
     </ng-container>

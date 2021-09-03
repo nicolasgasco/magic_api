@@ -2,6 +2,8 @@
   "../../assets/styles/mixin";
 
 header {
+  top: 0;
+
   > * {
     @include container-padding;
   }

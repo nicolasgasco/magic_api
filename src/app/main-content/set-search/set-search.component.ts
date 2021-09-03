@@ -34,7 +34,9 @@ export class SetSearchComponent implements OnInit {
     this.http
       .get('https://api.magicthegathering.io/v1/sets')
       .subscribe((setsData) => {
-        this.sets = Object.values(setsData)[0];
+        this.sets = Object.values(setsData)[0].filter(
+          (set) => set.type === 'core' || set.type === 'expansion'
+        );
         this.sets = this.sets
           // Filter only relevant keys
           .map((set) => {
