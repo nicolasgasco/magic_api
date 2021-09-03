@@ -78,8 +78,7 @@ export class SetSearchComponent implements OnInit {
               );
               return {
                 ...card,
-                name:
-                  card['foreignNames'][italianLanguageIndex].name || card.name,
+                foreginName: card['foreignNames'][italianLanguageIndex].name,
               };
             }
             // Else just use the English one

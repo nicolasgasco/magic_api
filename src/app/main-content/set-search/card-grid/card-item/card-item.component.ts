@@ -6,7 +6,10 @@ import { Card } from '../../../Card.model';
   template: `
     <ng-container *ngIf="!!card">
       <div class="card-container">
-        <h3>{{ card.name || '' }}</h3>
+        <h3>
+          {{ card.name }}
+          <span *ngIf="card.foreignName">( {{ card.foreignName }})</span>
+        </h3>
         <ng-container *ngIf="card.text">
           <p *ngFor="let sentence of card.text.split('. ')">
             {{ sentence.trim() }}
