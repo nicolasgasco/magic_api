@@ -5,18 +5,17 @@ import { Card } from '../../Card.model';
   selector: 'app-card-grid',
   template: `
     <section>
-      <app-card-item
-        *ngFor="let card of setCards"
-        [card]="card"
-      ></app-card-item>
+      <app-card-item *ngFor="let card of cards" [card]="card"></app-card-item>
     </section>
   `,
   styleUrls: ['./card-grid.component.scss'],
 })
 export class CardGridComponent implements OnInit {
-  @Input() setCards: Card[];
+  @Input() cards: Card[];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.cards);
+  }
 }

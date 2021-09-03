@@ -17,7 +17,7 @@ import { Set } from '../Set.model';
         </select>
       </ng-container>
       <ng-container *ngIf="setCards.length > 0">
-        <app-card-grid [setCards]="setCards"></app-card-grid>
+        <app-card-grid [cards]="setCards"></app-card-grid>
       </ng-container>
     </section>
   `,

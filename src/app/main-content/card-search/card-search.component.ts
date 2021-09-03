@@ -19,7 +19,7 @@ import { Component, OnInit } from '@angular/core';
       </div>
       <ng-container *ngIf="namedCards.length > 0">
         <span>CIao</span>
-        <!-- <app-card-grid [namedCards]="namedCards"></app-card-grid> -->
+        <app-card-grid [cards]="namedCards"></app-card-grid>
       </ng-container>
       <ng-container *ngIf="nothingFound">
         <span>No results.</span>
@@ -47,7 +47,24 @@ export class CardSearchComponent implements OnInit {
         )
         .subscribe((cards) => {
           if (cards['cards'] && cards['cards'].length !== 0) {
-            this.namedCards = cards['cards'];
+            this.namedCards = cards['cards'].map((card) => {
+              // If card has translations, then use the Italian one
+              if (card['foreignNames']) {
+                const italianLanguageIndex = card['foreignNames'].findIndex(
+                  (localizedName) => {
+                    return localizedName['language'] === 'Italian';
+                  }
+                );
+                return {
+                  ...card,
+                  name:
+                    card['foreignNames'][italianLanguageIndex].name ||
+                    card.name,
+                };
+              }
+              // Else just use the English one
+              return card;
+            });
           } else {
             this.nothingFound = true;
           }
