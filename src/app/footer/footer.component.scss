@@ -2,10 +2,13 @@
   "../../assets/styles/mixin";
 
 footer {
+  @include container-padding;
   background-color: $darker;
 
   text-align: center;
   font-size: 0.8rem;
- 
-  @include container-padding;
+
+  @media only screen and (min-width: 700px) {
+    text-align: right;
+  }
 }
