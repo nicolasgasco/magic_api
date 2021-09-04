@@ -4,9 +4,9 @@ import { Card } from '../../Card.model';
 @Component({
   selector: 'app-card-grid',
   template: `
-    <section>
+    <div class="card-grid">
       <app-card-item *ngFor="let card of cards" [card]="card"></app-card-item>
-    </section>
+    </div>
   `,
   styleUrls: ['./card-grid.component.scss'],
 })

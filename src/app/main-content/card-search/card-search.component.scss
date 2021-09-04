@@ -4,13 +4,7 @@
 section {
   @include desktop-container;
   @include mobile-container;
-  @include container-padding(3rem);
-
-  h2 {
-    margin: 0 auto 1rem auto;
-    font-size: 1.7rem;
-    max-width: 80%;
-  }
+  @include content-section;
 
   .card-name-input {
     @include styled-input;
@@ -26,14 +20,8 @@ section {
   }
 
   @media only screen and (min-width: 700px) {
-    h2 {
-      font-size: 2rem;
-    }
-
     .card-name-input {
       margin-top: 2rem;
     }
-
-    @include container-padding(5rem);
   }
 }

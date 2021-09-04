@@ -7,15 +7,17 @@ import { Set } from '../Set.model';
   selector: 'app-set-search',
   template: `
     <section>
-      <h2>Choose a set<br />to see the cards</h2>
-      <p class="magic-symbols">< = > @</p>
-      <ng-container *ngIf="sets.length > 0">
-        <select name="sets" id="sets" (change)="onSelectSet($event)">
-          <option *ngFor="let set of sets; index as i" [value]="set.code">
-            {{ set.name }} ({{ set.year }})
-          </option>
-        </select>
-      </ng-container>
+      <div class="input-container">
+        <h2>Choose a set to see the cards</h2>
+        <p class="magic-symbols">< = > @</p>
+        <ng-container *ngIf="sets.length > 0">
+          <select name="sets" id="sets" (change)="onSelectSet($event)">
+            <option *ngFor="let set of sets; index as i" [value]="set.code">
+              {{ set.name }} ({{ set.year }})
+            </option>
+          </select>
+        </ng-container>
+      </div>
       <ng-container *ngIf="setCards.length > 0">
         <app-card-grid [cards]="setCards"></app-card-grid>
       </ng-container>

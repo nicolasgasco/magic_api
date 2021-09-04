@@ -2,9 +2,12 @@
   "../../../assets/styles/mixin";
 
 section {
-  @include desktop-container;
   @include mobile-container;
-  @include container-padding(3rem);
+  @include content-section;
+
+  .input-container {
+    @include desktop-container;
+  }
 
   select {
     @include styled-input;
@@ -15,6 +18,16 @@ section {
       font-size: 11px;
       border: 0;
       background-color: $darker;
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    .select {
+      margin-top: 2rem;
     }
   }
 }

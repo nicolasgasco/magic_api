@@ -10,16 +10,16 @@ import { Card } from '../../../Card.model';
           {{ card.name }}
           <span *ngIf="card.foreignName">( {{ card.foreignName }})</span>
         </h3>
+        <img
+          [src]="card.imageUrl ? card.imageUrl : '/assets/img/card_back.jpg'"
+          [alt]="card.imageUrl ? card.name : 'Generic Magic card back'"
+        />
         <ng-container *ngIf="card.text">
           <p *ngFor="let sentence of card.text.split('. ')">
             {{ sentence.trim() }}
           </p>
         </ng-container>
         <q *ngIf="card.flavor">{{ card.flavor }}</q>
-        <img
-          [src]="card.imageUrl ? card.imageUrl : '/assets/img/card_back.jpg'"
-          [alt]="card.imageUrl ? card.name : 'Generic Magic card back'"
-        />
       </div>
     </ng-container>
   `,

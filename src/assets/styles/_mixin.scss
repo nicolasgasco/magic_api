@@ -43,3 +43,24 @@
   content: "‣ ";
   margin-right: 0.5rem;
 }
+
+@mixin content-section {
+  @include container-padding(3rem);
+
+  h2 {
+    margin: 0 auto 1rem auto;
+    font-size: 1.7rem;
+    max-width: 80%;
+  }
+
+  @media only screen and (min-width: 700px) {
+    h2 {
+      font-size: 2rem;
+    }
+    @include container-padding(5rem);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+}
