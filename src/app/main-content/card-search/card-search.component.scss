@@ -2,9 +2,16 @@
   "../../../assets/styles/mixin";
 
 section {
-  @include desktop-container;
   @include mobile-container;
   @include content-section;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .input-container {
+    @include desktop-container;
+  }
 
   .card-name-input {
     @include styled-input;

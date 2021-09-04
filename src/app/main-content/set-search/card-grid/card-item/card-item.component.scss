@@ -1,11 +1,16 @@
+@import "../../../../../assets/styles/colors";
+
 .card-container {
   margin: 1rem auto;
   padding: 1rem;
 
-  background-color: white;
+  background-color: $white;
   border-radius: 10px;
 
   height: 100%;
+
+  border: 10px black solid;
+  border-bottom: 30px black solid;
 
   img {
     width: 75%;

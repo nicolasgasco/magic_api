@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-card-search',
   template: `
     <section>
-      <div>
+      <div class="input-container">
         <h2>Search the name of a card below</h2>
         <p class="magic-symbols">< = > @</p>
         <input
@@ -23,7 +23,6 @@ import { Component, OnInit } from '@angular/core';
         </div>
       </ng-container>
       <ng-container *ngIf="namedCards.length > 0 && nothingFound === false">
-        <span>CIao</span>
         <app-card-grid [cards]="namedCards"></app-card-grid>
       </ng-container>
     </section>
@@ -48,6 +47,7 @@ export class CardSearchComponent implements OnInit {
           `https://api.magicthegathering.io/v1/cards?name=${event.target.value}&language=italian`
         )
         .subscribe((cards) => {
+          this.nothingFound = false;
           if (cards['cards'] && cards['cards'].length !== 0) {
             this.namedCards = cards['cards'].map((card) => {
               // If card has translations, then use the Italian one
