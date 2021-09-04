@@ -3,14 +3,37 @@
 
 section {
   @include desktop-container;
-  @include container-padding;
   @include mobile-container;
-}
+  @include container-padding(3rem);
 
-.card-name-input {
-  @include styled-input;
+  h2 {
+    margin: 0 auto 1rem auto;
+    font-size: 1.7rem;
+    max-width: 80%;
+  }
 
-  font-size: 1.1rem;
-  text-align: center;
-  letter-spacing: 3px;
+  .card-name-input {
+    @include styled-input;
+
+    font-size: 1.1rem;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  .no-results {
+    margin-top: 5rem;
+    font-size: 1.3rem;
+  }
+
+  @media only screen and (min-width: 700px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    .card-name-input {
+      margin-top: 2rem;
+    }
+
+    @include container-padding(5rem);
+  }
 }

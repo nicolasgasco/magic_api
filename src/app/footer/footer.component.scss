@@ -2,7 +2,7 @@
   "../../assets/styles/mixin";
 
 footer {
-  @include container-padding;
+  @include container-padding(1rem);
   background-color: $darker;
 
   text-align: center;

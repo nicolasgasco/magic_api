@@ -15,14 +15,16 @@ import { Component, OnInit } from '@angular/core';
           placeholder="Insert card name..."
           (input)="onChangeName($event)"
         />
-        <small>Search only works in Italian for now :(</small>
+        <small>(As of now, search only works in Italian)</small>
       </div>
-      <ng-container *ngIf="namedCards.length > 0">
+      <ng-container *ngIf="nothingFound">
+        <div class="no-results">
+          <span>No results found :(</span>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="namedCards.length > 0 && nothingFound === false">
         <span>CIao</span>
         <app-card-grid [cards]="namedCards"></app-card-grid>
-      </ng-container>
-      <ng-container *ngIf="nothingFound">
-        <span>No results.</span>
       </ng-container>
     </section>
   `,

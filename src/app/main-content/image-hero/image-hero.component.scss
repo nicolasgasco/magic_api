@@ -9,8 +9,6 @@
   justify-content: center;
   align-items: center;
 
-  @include container-padding;
-
   background-image: url("../../../assets/img/foundry_mobile.jpg");
   @media (orientation: landscape) {
     background-image: url("../../../assets/img/foundry_desktop.jpg");
