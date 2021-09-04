@@ -4,10 +4,6 @@
 section {
   @include mobile-container;
   @include content-section;
-  
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
 
   .input-container {
     @include desktop-container;
@@ -27,6 +23,10 @@ section {
   }
 
   @media only screen and (min-width: 700px) {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
     .card-name-input {
       margin-top: 2rem;
     }
