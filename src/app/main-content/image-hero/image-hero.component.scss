@@ -7,11 +7,11 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
 
   @include container-padding;
 
   background-image: url("../../../assets/img/foundry_mobile.jpg");
-
   @media (orientation: landscape) {
     background-image: url("../../../assets/img/foundry_desktop.jpg");
   }
@@ -23,14 +23,17 @@
     font-size: 1.5rem;
     color: $dark;
     font-weight: bold;
-    letter-spacing: 3px;
-    line-height: 2;
+    letter-spacing: 2px;
 
     text-align: center;
+    display: block;
+    max-width: 80%;
   }
 
   span {
-    line-height: 1;
+    display: inline-block;
+    margin-top: 0.5rem;
+
     color: $darker;
     font-family: "Magic", serif;
     font-size: 2.5rem;
@@ -42,13 +45,17 @@
 
   @media only screen and (min-width: 700px) {
     h2 {
+      letter-spacing: 3px;
+      line-height: 2;
       font-size: 2rem;
     }
 
     span {
-      font-size: 3rem;
+      margin-top: 0;
+
+      font-size: 3.5rem;
       span {
-        font-size: 2.5rem;
+        font-size: 3rem;
       }
     }
   }
