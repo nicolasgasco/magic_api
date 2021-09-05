@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Card } from '../../Card.model';
 
 @Component({
   selector: 'app-card-grid',
@@ -11,11 +10,10 @@ import { Card } from '../../Card.model';
   styleUrls: ['./card-grid.component.scss'],
 })
 export class CardGridComponent implements OnInit {
-  @Input() cards: Card[];
+  @Input() cards: [];
 
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.cards);
   }
 }
