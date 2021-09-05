@@ -26,8 +26,12 @@ section {
     flex-flow: column nowrap;
     align-items: center;
 
-    .select {
+    select {
       margin-top: 2rem;
+      font-size: 1rem;
+      option {
+        font-size: 1rem;
+      }
     }
   }
 }
