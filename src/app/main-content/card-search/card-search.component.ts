@@ -49,24 +49,31 @@ export class CardSearchComponent implements OnInit {
         .subscribe((cards) => {
           this.nothingFound = false;
           if (cards['cards'] && cards['cards'].length !== 0) {
-            this.namedCards = cards['cards'].map((card) => {
-              // If card has translations, then use the Italian one
-              if (card['foreignNames']) {
-                const italianLanguageIndex = card['foreignNames'].findIndex(
-                  (localizedName) => {
-                    return localizedName['language'] === 'Italian';
-                  }
-                );
-                return {
-                  ...card,
-                  name:
-                    card['foreignNames'][italianLanguageIndex].name ||
-                    card.name,
-                };
-              }
-              // Else just use the English one
-              return card;
-            });
+            this.namedCards = cards['cards']
+              .map((card) => {
+                // If card has translations, then use the Italian one
+                if (card['foreignNames']) {
+                  const italianLanguageIndex = card['foreignNames'].findIndex(
+                    (localizedName) => {
+                      return localizedName['language'] === 'Italian';
+                    }
+                  );
+                  return {
+                    ...card,
+                    name:
+                      card['foreignNames'][italianLanguageIndex].name ||
+                      card.name,
+                  };
+                }
+                // Else just use the English one
+                return card;
+              })
+              .sort((a, b) => {
+                if (a.name > b.name) return 1;
+                if (b.name > a.name) return -1;
+                return 0;
+              });
+            console.log(this.namedCards);
           } else {
             this.nothingFound = true;
           }
